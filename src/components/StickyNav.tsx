@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export function StickyNav() {
+export function StickyNav({ showCta = true, showHowItWorks = true }: { showCta?: boolean; showHowItWorks?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -45,9 +45,9 @@ export function StickyNav() {
           </span>
         </Link>
 
-        {/* Tagline — absolute center, fades out on scroll */}
+        {/* Tagline — absolute center, fades out on scroll, hidden on mobile */}
         <p
-          className="absolute left-1/2 -translate-x-1/2 text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400 whitespace-nowrap pointer-events-none"
+          className="hidden sm:block absolute left-1/2 -translate-x-1/2 text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400 whitespace-nowrap pointer-events-none"
           style={{
             fontFamily: "var(--font-geist-mono), monospace",
             opacity: scrolled ? 0 : 1,
@@ -59,28 +59,32 @@ export function StickyNav() {
 
         {/* Right side */}
         <div className="flex items-center gap-4">
-          {/* How it works anchor */}
-          <a
-            href="#how-it-works"
-            className="text-xs font-medium whitespace-nowrap transition-colors hover:text-gray-900"
-            style={{
-              color: "#6b7280",
-              fontFamily: "var(--font-geist-mono), monospace",
-              letterSpacing: "0.04em",
-            }}
-          >
-            How it works
-          </a>
+          {/* How it works anchor — hidden on mobile */}
+          {showHowItWorks && (
+            <a
+              href="#how-it-works"
+              className="hidden sm:block text-xs font-medium whitespace-nowrap transition-colors hover:text-gray-900"
+              style={{
+                color: "#6b7280",
+                fontFamily: "var(--font-geist-mono), monospace",
+                letterSpacing: "0.04em",
+              }}
+            >
+              How it works
+            </a>
+          )}
 
           {/* Reserve CTA */}
-          <Button
-            asChild
-            size="sm"
-            className="text-xs font-semibold rounded-full text-white h-8 px-4 whitespace-nowrap"
-            style={{ background: "#0d9488" }}
-          >
-            <Link href="/reserve">Reserve →</Link>
-          </Button>
+          {showCta && (
+            <Button
+              asChild
+              size="sm"
+              className="text-xs font-semibold rounded-full text-white h-8 px-4 whitespace-nowrap"
+              style={{ background: "#0d9488" }}
+            >
+              <Link href="/reserve">Reserve →</Link>
+            </Button>
+          )}
         </div>
       </nav>
     </div>

@@ -18,7 +18,7 @@ export default function Home() {
         }}
       >
         {/* Hero content — vertically centered in remaining space */}
-        <div className="flex-1 flex items-center justify-center px-8 pb-20">
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8 pb-20">
           <div className="max-w-4xl w-full flex flex-col gap-7">
             {/* Badge */}
             <span
@@ -45,7 +45,8 @@ export default function Home() {
               className="text-[3.75rem] sm:text-[5rem] lg:text-[5.5rem] leading-[1.05] tracking-tight text-gray-900"
               style={{ fontFamily: "var(--font-serif), serif", fontStyle: "italic" }}
             >
-              Your organic marketing.{" "}
+              Your organic marketing.
+              <br />
               <span style={{ color: "#0d9488" }}>On autopilot.</span>
             </h1>
 
@@ -72,7 +73,7 @@ export default function Home() {
                 </Button>
                 <a
                   href="#how-it-works"
-                  className="h-12 px-6 rounded-full inline-flex items-center text-sm font-semibold text-gray-600 transition-colors hover:bg-gray-200"
+                  className="h-12 px-6 rounded-full inline-flex items-center text-sm font-semibold text-gray-600 transition-colors hover:bg-gray-200 whitespace-nowrap"
                   style={{ background: "#e5e7eb" }}
                 >
                   See how it works
@@ -105,7 +106,7 @@ export default function Home() {
           marginTop: "-40px",
         }}
       >
-        <div className="max-w-4xl mx-auto px-8 py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 pt-20 pb-60">
           {/* Section header */}
           <div className="flex flex-col gap-3 mb-12">
             <span
