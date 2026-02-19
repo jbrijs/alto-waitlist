@@ -137,6 +137,12 @@ export default function Home() {
                 01
               </span>
               <div className="flex flex-col gap-1.5">
+                <span
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  Setup
+                </span>
                 <h3 className="text-base font-semibold text-gray-900">Integrate your business</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Connect your website, Google Business Profile, and other services. Takes under 5 minutes and Alto takes over from there.
@@ -153,6 +159,12 @@ export default function Home() {
                 02
               </span>
               <div className="flex flex-col gap-1.5">
+                <span
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  Audit
+                </span>
                 <h3 className="text-base font-semibold text-gray-900">AI maps your presence</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Alto benchmarks where you rank across ChatGPT, Google, and many other online sources, capturing how your brand is described and where competitors have the edge.
@@ -169,6 +181,12 @@ export default function Home() {
                 03
               </span>
               <div className="flex flex-col gap-1.5">
+                <span
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  Optimize
+                </span>
                 <h3 className="text-base font-semibold text-gray-900">Autonomous optimization</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Alto publishes SEO content, strengthens your citation signals, updates your local listings, and continuously improves how AI platforms represent your business.
@@ -185,6 +203,12 @@ export default function Home() {
                 04
               </span>
               <div className="flex flex-col gap-1.5">
+                <span
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  Results
+                </span>
                 <h3 className="text-base font-semibold text-gray-900">Results you can see</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Watch AI visibility, search rankings, and local traffic grow over time. Clear metrics with no agency interpretation layer between you and the data.
