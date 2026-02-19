@@ -121,7 +121,7 @@ export default function Home() {
               <span style={{ color: "#0d9488" }}>Alto runs the rest.</span>
             </h2>
             <p className="text-base text-gray-500 leading-relaxed max-w-lg">
-              From onboarding to ongoing optimization — here&apos;s exactly what happens after you reserve your spot.
+              From integration to ongoing optimization, here is what to expect once you secure your spot.
             </p>
           </div>
 
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-100 rounded-xl overflow-hidden border border-gray-100">
             {/* Step 1 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-1">
                 <span
                   className="text-[2rem] font-bold leading-none"
                   style={{ color: "rgba(13, 148, 136, 0.15)", fontFamily: "var(--font-geist-mono), monospace" }}
@@ -137,23 +137,23 @@ export default function Home() {
                   01
                 </span>
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase px-2 py-0.5 rounded-full"
-                  style={{ background: "rgba(13, 148, 136, 0.08)", color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-400"
+                  style={{ fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Setup
                 </span>
               </div>
               <div className="flex flex-col gap-1.5">
-                <h3 className="text-base font-semibold text-gray-900">Connect your business</h3>
+                <h3 className="text-base font-semibold text-gray-900">Integrate your business</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  Share your website, Google Business Profile, and key details. Takes under 5 minutes — then Alto takes over.
+                  Connect your website, Google Business Profile, and other services. Takes under 5 minutes and Alto takes over from there.
                 </p>
               </div>
             </div>
 
             {/* Step 2 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-1">
                 <span
                   className="text-[2rem] font-bold leading-none"
                   style={{ color: "rgba(13, 148, 136, 0.15)", fontFamily: "var(--font-geist-mono), monospace" }}
@@ -161,8 +161,8 @@ export default function Home() {
                   02
                 </span>
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase px-2 py-0.5 rounded-full"
-                  style={{ background: "rgba(37, 99, 235, 0.08)", color: "#2563eb", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-400"
+                  style={{ fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Audit
                 </span>
@@ -170,14 +170,14 @@ export default function Home() {
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">AI maps your presence</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  Alto queries ChatGPT, Perplexity, and Google to benchmark where you rank, how AI describes your brand, and where competitors are beating you.
+                  Alto benchmarks where you rank across ChatGPT, Google, and many other online sources, capturing how your brand is described and where competitors have the edge.
                 </p>
               </div>
             </div>
 
             {/* Step 3 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-1">
                 <span
                   className="text-[2rem] font-bold leading-none"
                   style={{ color: "rgba(13, 148, 136, 0.15)", fontFamily: "var(--font-geist-mono), monospace" }}
@@ -185,8 +185,8 @@ export default function Home() {
                   03
                 </span>
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase px-2 py-0.5 rounded-full"
-                  style={{ background: "rgba(124, 58, 237, 0.08)", color: "#7c3aed", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-400"
+                  style={{ fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Optimize
                 </span>
@@ -194,14 +194,14 @@ export default function Home() {
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">Autonomous optimization</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  Alto publishes SEO content, strengthens your citation signals, updates your local listings, and improves how AI platforms represent your business — continuously.
+                  Alto publishes SEO content, strengthens your citation signals, updates your local listings, and continuously improves how AI platforms represent your business.
                 </p>
               </div>
             </div>
 
             {/* Step 4 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col gap-1">
                 <span
                   className="text-[2rem] font-bold leading-none"
                   style={{ color: "rgba(13, 148, 136, 0.15)", fontFamily: "var(--font-geist-mono), monospace" }}
@@ -209,16 +209,16 @@ export default function Home() {
                   04
                 </span>
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase px-2 py-0.5 rounded-full"
-                  style={{ background: "rgba(217, 119, 6, 0.08)", color: "#d97706", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.15em] uppercase text-gray-400"
+                  style={{ fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Results
                 </span>
               </div>
               <div className="flex flex-col gap-1.5">
-                <h3 className="text-base font-semibold text-gray-900">Results you can measure</h3>
+                <h3 className="text-base font-semibold text-gray-900">Results you can see</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  Track AI visibility, search rankings, and local traffic in your dashboard. No agency interpretation layer — just clear numbers.
+                  Watch AI visibility, search rankings, and local traffic grow over time. Clear metrics with no agency interpretation layer between you and the data.
                 </p>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function Home() {
               className="text-xs text-gray-400"
               style={{ fontFamily: "var(--font-geist-mono), monospace" }}
             >
-              Early access — limited spots available
+              Early access, limited spots available
             </p>
           </div>
         </div>
