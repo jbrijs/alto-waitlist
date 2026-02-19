@@ -1,63 +1,98 @@
-import Image from "next/image";
+import { Zap, DollarSign, Users } from "lucide-react";
+import { WaitlistForm } from "@/components/WaitlistForm";
+import { ValuePropCard } from "@/components/ValuePropCard";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen" style={{ background: "#f3f4f6" }}>
+      {/* Header */}
+      <header className="flex items-center justify-between px-6 py-5 max-w-3xl mx-auto">
+        <div className="flex items-baseline gap-0.5">
+          <span
+            className="text-xl font-bold tracking-tight text-gray-900"
+            style={{ fontFamily: "var(--font-jakarta), sans-serif" }}
+          >
+            alto
+          </span>
+          <span className="text-xl font-bold" style={{ color: "#0d9488" }}>
+            .
+          </span>
+        </div>
+        <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400">
+          Digital Marketing, Automated
+        </p>
+      </header>
+
+      <main className="max-w-2xl mx-auto px-6 pt-12 pb-24 flex flex-col gap-12">
+        {/* Hero */}
+        <div className="flex flex-col gap-5">
+          <span
+            className="self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold"
+            style={{
+              background: "rgba(13, 148, 136, 0.08)",
+              color: "#0d9488",
+            }}
+          >
+            <span
+              className="w-1.5 h-1.5 rounded-full"
+              style={{ background: "#0d9488" }}
+            />
+            Early Access — Limited Spots
+          </span>
+
+          <h1
+            className="text-[2.75rem] font-bold leading-tight tracking-tight text-gray-900"
+            style={{ fontFamily: "var(--font-jakarta), sans-serif" }}
+          >
+            Your AI marketing agency.{" "}
+            <span style={{ color: "#0d9488" }}>On autopilot.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-lg text-gray-500 leading-relaxed max-w-xl">
+            Alto autonomously manages your SEO, AEO, and Google Business
+            Profile — no agency, no manual work, at a fraction of the cost.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Value Props */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <ValuePropCard
+            icon={<Zap size={16} />}
+            title="Autonomous execution"
+            description="Continuously optimizes your SEO, AEO, and Google Business Profile — no manual work required."
+          />
+          <ValuePropCard
+            icon={<DollarSign size={16} />}
+            title="Fraction of the cost"
+            description="Agencies charge $3k–$10k/month. Alto starts at $500."
+          />
+          <ValuePropCard
+            icon={<Users size={16} />}
+            title="Built for founders"
+            description="No dashboards to manage. No agency to babysit. Just results."
+          />
+        </div>
+
+        {/* Form Card */}
+        <div className="panel relative overflow-hidden p-8">
+          {/* Teal top accent */}
+          <div
+            className="absolute inset-x-0 top-0 h-[3px] rounded-t-[10px]"
+            style={{ background: "#0d9488" }}
+          />
+
+          <div className="flex flex-col gap-6">
+            <div>
+              <h2 className="text-lg font-bold text-gray-900">
+                Reserve your spot
+              </h2>
+              <p className="text-sm text-gray-500 mt-1">
+                Join the early access waitlist and lock in preferred pricing.
+              </p>
+            </div>
+
+            <WaitlistForm />
+          </div>
         </div>
       </main>
     </div>
