@@ -130,12 +130,12 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-100 rounded-xl overflow-hidden border border-gray-100">
             {/* Step 1 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                style={{ background: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+              <span
+                className="text-[2rem] font-bold leading-none tabular-nums"
+                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
               >
-                1
-              </div>
+                01
+              </span>
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">Integrate your business</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
@@ -146,12 +146,12 @@ export default function Home() {
 
             {/* Step 2 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                style={{ background: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+              <span
+                className="text-[2rem] font-bold leading-none tabular-nums"
+                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
               >
-                2
-              </div>
+                02
+              </span>
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">AI maps your presence</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
@@ -162,12 +162,12 @@ export default function Home() {
 
             {/* Step 3 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                style={{ background: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+              <span
+                className="text-[2rem] font-bold leading-none tabular-nums"
+                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
               >
-                3
-              </div>
+                03
+              </span>
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">Autonomous optimization</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
@@ -178,12 +178,12 @@ export default function Home() {
 
             {/* Step 4 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                style={{ background: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
+              <span
+                className="text-[2rem] font-bold leading-none tabular-nums"
+                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
               >
-                4
-              </div>
+                04
+              </span>
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">Results you can see</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
