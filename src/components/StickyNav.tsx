@@ -22,12 +22,12 @@ export function StickyNav() {
           width: scrolled ? "min(900px, calc(100% - 48px))" : "100%",
           padding: scrolled ? "10px 22px" : "16px 8px",
           borderRadius: scrolled ? "9999px" : "0",
-          background: scrolled ? "rgba(255, 255, 255, 0.72)" : "transparent",
-          backdropFilter: scrolled ? "blur(24px) saturate(180%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(24px) saturate(180%)" : "none",
-          border: scrolled ? "1px solid rgba(255, 255, 255, 0.6)" : "1px solid transparent",
+          background: scrolled ? "rgba(255, 255, 255, 0.62)" : "transparent",
+          backdropFilter: scrolled ? "blur(28px) saturate(200%)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(28px) saturate(200%)" : "none",
+          border: scrolled ? "1px solid rgba(255, 255, 255, 0.75)" : "1px solid transparent",
           boxShadow: scrolled
-            ? "0 8px 40px rgba(0,0,0,0.10), 0 2px 12px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.9)"
+            ? "0 8px 40px rgba(0,0,0,0.10), 0 2px 12px rgba(0,0,0,0.06), 0 0 0 0.5px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,1)"
             : "none",
           transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
