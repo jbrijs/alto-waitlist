@@ -14,7 +14,7 @@ export default function Home() {
           background:
             "radial-gradient(ellipse 120% 80% at 50% -10%, #fdfcfb 0%, #f0faf8 45%, #f3f4f6 100%)",
           paddingTop: "72px",
-          minHeight: "75vh",
+          minHeight: "90vh",
         }}
       >
         {/* Hero content — vertically centered in remaining space */}
