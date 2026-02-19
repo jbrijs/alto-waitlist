@@ -21,9 +21,9 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Alto — Early Access",
+  title: "Alto | Early Access for autonomous organic marketing",
   description:
-    "Alto is an AI-native digital marketing agency that autonomously manages your SEO, AEO, and online presence. Join the waitlist.",
+    "Alto is an AI-native organic marketing agency that autonomously manages your SEO, AEO, and online presence. Join the waitlist.",
 };
 
 export default function RootLayout({
