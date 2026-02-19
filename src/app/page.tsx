@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { Zap, DollarSign, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ValuePropCard } from "@/components/ValuePropCard";
 
 export default function Home() {
   return (
@@ -249,32 +247,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value props below the fold */}
-      <div style={{ background: "#f3f4f6" }}>
-        <div
-          className="w-full h-px"
-          style={{ background: "linear-gradient(to right, transparent, #e5e7eb, transparent)" }}
-        />
-        <div className="max-w-3xl mx-auto px-8 py-20">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <ValuePropCard
-              icon={<Zap size={16} />}
-              title="Autonomous execution"
-              description="Continuously optimizes your SEO, AEO, and Google Business Profile — no manual work required."
-            />
-            <ValuePropCard
-              icon={<DollarSign size={16} />}
-              title="Fraction of the cost"
-              description="Agencies charge $3k–$10k/month. Alto starts at $500."
-            />
-            <ValuePropCard
-              icon={<Users size={16} />}
-              title="Built for founders"
-              description="No dashboards to manage. No agency to babysit. Just results."
-            />
-          </div>
-        </div>
-      </div>
     </>
   );
 }
