@@ -1,40 +1,47 @@
 "use client";
 
 import { useState } from "react";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+const schema = z.object({
+  name: z.string().min(1, "Full name is required."),
+  email: z.string().min(1, "Email is required.").email("Please enter a valid email address."),
+  businessName: z.string().min(1, "Business name is required."),
+});
+
+type FieldErrors = Partial<Record<keyof z.infer<typeof schema>, string>>;
+
 export function WaitlistForm() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    businessName: "",
-  });
-  const [error, setError] = useState<string | null>(null);
+  const [form, setForm] = useState({ name: "", email: "", businessName: "" });
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [serverError, setServerError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
+    setServerError(null);
 
-    if (!form.name.trim() || !form.email.trim() || !form.businessName.trim()) {
-      setError("All fields are required.");
+    const result = schema.safeParse(form);
+    if (!result.success) {
+      const errors: FieldErrors = {};
+      for (const issue of result.error.issues) {
+        const field = issue.path[0] as keyof FieldErrors;
+        if (!errors[field]) errors[field] = issue.message;
+      }
+      setFieldErrors(errors);
       return;
     }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(form.email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
+    setFieldErrors({});
 
     setLoading(true);
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(result.data),
       });
 
       if (!res.ok) {
@@ -44,13 +51,13 @@ export function WaitlistForm() {
 
       const { url } = await res.json();
       if (!url) {
-        setError("No redirect URL received. Please try again.");
+        setServerError("No redirect URL received. Please try again.");
         setLoading(false);
         return;
       }
       window.location.href = url;
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong.");
+      setServerError(err instanceof Error ? err.message : "Something went wrong.");
       setLoading(false);
     }
   };
@@ -70,6 +77,9 @@ export function WaitlistForm() {
           className="bg-white border-gray-200 focus-visible:ring-teal-500/30"
           disabled={loading}
         />
+        {fieldErrors.name && (
+          <p role="alert" className="text-xs text-red-600">{fieldErrors.name}</p>
+        )}
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -85,13 +95,13 @@ export function WaitlistForm() {
           className="bg-white border-gray-200 focus-visible:ring-teal-500/30"
           disabled={loading}
         />
+        {fieldErrors.email && (
+          <p role="alert" className="text-xs text-red-600">{fieldErrors.email}</p>
+        )}
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <Label
-          htmlFor="businessName"
-          className="text-sm font-medium text-gray-700"
-        >
+        <Label htmlFor="businessName" className="text-sm font-medium text-gray-700">
           Business Name
         </Label>
         <Input
@@ -99,16 +109,17 @@ export function WaitlistForm() {
           type="text"
           placeholder="Sunrise Home Care"
           value={form.businessName}
-          onChange={(e) =>
-            setForm((f) => ({ ...f, businessName: e.target.value }))
-          }
+          onChange={(e) => setForm((f) => ({ ...f, businessName: e.target.value }))}
           className="bg-white border-gray-200 focus-visible:ring-teal-500/30"
           disabled={loading}
         />
+        {fieldErrors.businessName && (
+          <p role="alert" className="text-xs text-red-600">{fieldErrors.businessName}</p>
+        )}
       </div>
 
-      {error && (
-        <p role="alert" className="text-sm text-red-600 font-medium">{error}</p>
+      {serverError && (
+        <p role="alert" className="text-sm text-red-600 font-medium">{serverError}</p>
       )}
 
       <Button
