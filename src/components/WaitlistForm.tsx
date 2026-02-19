@@ -71,7 +71,7 @@ export function WaitlistForm() {
         <Input
           id="name"
           type="text"
-          placeholder="Jane Smith"
+          placeholder="Your full name"
           value={form.name}
           onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
           className="bg-white border-gray-200 focus-visible:ring-teal-500/30"
@@ -89,7 +89,7 @@ export function WaitlistForm() {
         <Input
           id="email"
           type="email"
-          placeholder="jane@yourcompany.com"
+          placeholder="you@example.com"
           value={form.email}
           onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
           className="bg-white border-gray-200 focus-visible:ring-teal-500/30"
@@ -107,7 +107,7 @@ export function WaitlistForm() {
         <Input
           id="businessName"
           type="text"
-          placeholder="Sunrise Home Care"
+          placeholder="Your business name"
           value={form.businessName}
           onChange={(e) => setForm((f) => ({ ...f, businessName: e.target.value }))}
           className="bg-white border-gray-200 focus-visible:ring-teal-500/30"
