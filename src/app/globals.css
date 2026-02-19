@@ -49,6 +49,7 @@
   --color-foreground:         var(--foreground);
   --font-sans:                var(--font-jakarta);
   --font-mono:                var(--font-geist-mono);
+  --font-serif:               var(--font-serif);
   --radius-sm:                calc(var(--radius) - 2px);
   --radius-md:                var(--radius);
   --radius-lg:                calc(var(--radius) + 2px);
