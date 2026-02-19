@@ -43,6 +43,11 @@ export function WaitlistForm() {
       }
 
       const { url } = await res.json();
+      if (!url) {
+        setError("No redirect URL received. Please try again.");
+        setLoading(false);
+        return;
+      }
       window.location.href = url;
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong.");
@@ -103,7 +108,7 @@ export function WaitlistForm() {
       </div>
 
       {error && (
-        <p className="text-sm text-red-600 font-medium">{error}</p>
+        <p role="alert" className="text-sm text-red-600 font-medium">{error}</p>
       )}
 
       <Button
