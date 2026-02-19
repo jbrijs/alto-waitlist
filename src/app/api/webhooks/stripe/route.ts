@@ -19,6 +19,15 @@ export async function POST(req: Request) {
   }
 
   if (event.type === "checkout.session.completed") {
+    const notificationEmail = process.env.NOTIFICATION_EMAIL;
+    if (!notificationEmail) {
+      console.error("NOTIFICATION_EMAIL is not set");
+      return NextResponse.json(
+        { error: "Server configuration error" },
+        { status: 500 },
+      );
+    }
+
     const session = event.data.object as {
       id: string;
       metadata: { name: string; email: string; businessName: string };
@@ -26,16 +35,21 @@ export async function POST(req: Request) {
 
     const { name, email, businessName } = session.metadata;
 
-    await supabase.from("waitlist").insert({
+    const { error: dbError } = await supabase.from("waitlist").insert({
       name,
       email,
       business_name: businessName,
       stripe_session_id: session.id,
     });
 
+    if (dbError) {
+      console.error("Supabase insert failed:", dbError);
+      return NextResponse.json({ error: "Database error" }, { status: 500 });
+    }
+
     await resend.emails.send({
       from: "Alto <onboarding@resend.dev>",
-      to: process.env.NOTIFICATION_EMAIL!,
+      to: notificationEmail,
       subject: `New Alto waitlist signup: ${name} — ${businessName}`,
       html: `
         <h2>New Waitlist Signup</h2>
