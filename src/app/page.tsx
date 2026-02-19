@@ -96,7 +96,7 @@ export default function Home() {
           background: "rgba(255, 255, 255, 0.92)",
           backdropFilter: "blur(20px) saturate(150%)",
           WebkitBackdropFilter: "blur(20px) saturate(150%)",
-          borderRadius: "40px 40px 0 0",
+          borderRadius: "64px 64px 0 0",
           border: "1px solid rgba(255, 255, 255, 0.75)",
           borderBottom: "none",
           boxShadow:
