@@ -13,27 +13,42 @@ export async function POST(req: Request) {
 
   const baseUrl = process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000";
 
-  const session = await stripe.checkout.sessions.create({
-    mode: "payment",
-    line_items: [
-      {
-        price_data: {
-          currency: "usd",
-          product_data: {
-            name: "Alto Early Access — Refundable Deposit",
-            description:
-              "Secures your spot for Alto early access and preferred pricing. Fully refundable if Alto isn't a fit.",
+  let session;
+  try {
+    session = await stripe.checkout.sessions.create({
+      mode: "payment",
+      line_items: [
+        {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: "Alto Early Access — Refundable Deposit",
+              description:
+                "Secures your spot for Alto early access and preferred pricing. Fully refundable if Alto isn't a fit.",
+            },
+            unit_amount: 10000, // $100.00
           },
-          unit_amount: 10000, // $100.00
+          quantity: 1,
         },
-        quantity: 1,
-      },
-    ],
-    customer_email: email,
-    metadata: { name, email, businessName },
-    success_url: `${baseUrl}/thank-you?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${baseUrl}/?canceled=true`,
-  });
+      ],
+      customer_email: email,
+      metadata: { name, email, businessName },
+      success_url: `${baseUrl}/thank-you?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/?canceled=true`,
+    });
+  } catch {
+    return NextResponse.json(
+      { error: "Failed to create checkout session. Please try again." },
+      { status: 500 },
+    );
+  }
+
+  if (!session.url) {
+    return NextResponse.json(
+      { error: "No checkout URL returned from Stripe." },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ url: session.url });
 }
