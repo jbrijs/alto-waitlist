@@ -45,7 +45,7 @@ export default function Home() {
               className="text-[3.75rem] sm:text-[5rem] lg:text-[5.5rem] leading-[1.05] tracking-tight text-gray-900"
               style={{ fontFamily: "var(--font-serif), serif", fontStyle: "italic" }}
             >
-              Your AI marketing agency.{" "}
+              Your online presence.{" "}
               <span style={{ color: "#0d9488" }}>On autopilot.</span>
             </h1>
 
@@ -54,8 +54,9 @@ export default function Home() {
               className="text-lg text-gray-500 leading-relaxed max-w-xl"
               style={{ fontFamily: "var(--font-jakarta), sans-serif" }}
             >
-              Alto autonomously manages your SEO, AEO, and Google Business
-              Profile — no agency, no manual work, at a fraction of the cost.
+              Alto continuously improves your search visibility, AI presence,
+              and local rankings so more customers find you. No agency, no
+              manual work, at a fraction of the cost.
             </p>
 
             {/* CTA */}
