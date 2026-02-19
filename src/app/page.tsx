@@ -7,13 +7,14 @@ export default function Home() {
     <>
       <StickyNav />
 
-      {/* Full-bleed hero with radial gradient */}
+      {/* Full-bleed hero with radial gradient — 75vh so how-it-works peeks below */}
       <div
-        className="min-h-screen flex flex-col"
+        className="flex flex-col"
         style={{
           background:
             "radial-gradient(ellipse 120% 80% at 50% -10%, #fdfcfb 0%, #f0faf8 45%, #f3f4f6 100%)",
           paddingTop: "72px",
+          minHeight: "75vh",
         }}
       >
         {/* Hero content — vertically centered in remaining space */}
@@ -87,10 +88,21 @@ export default function Home() {
         </div>
       </div>
 
-      {/* How it works */}
+      {/* How it works — glass card overlapping the hero gradient */}
       <section
         id="how-it-works"
-        style={{ background: "#ffffff" }}
+        className="relative z-10"
+        style={{
+          background: "rgba(255, 255, 255, 0.92)",
+          backdropFilter: "blur(20px) saturate(150%)",
+          WebkitBackdropFilter: "blur(20px) saturate(150%)",
+          borderRadius: "28px 28px 0 0",
+          border: "1px solid rgba(255, 255, 255, 0.75)",
+          borderBottom: "none",
+          boxShadow:
+            "0 -8px 40px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1)",
+          marginTop: "-40px",
+        }}
       >
         <div className="max-w-4xl mx-auto px-8 py-20">
           {/* Section header */}
