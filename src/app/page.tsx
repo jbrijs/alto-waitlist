@@ -129,17 +129,17 @@ export default function Home() {
           {/* Steps */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-100 rounded-xl overflow-hidden border border-gray-100">
             {/* Step 1 */}
-            <div className="bg-white p-7 flex flex-col gap-4">
+            <div className="bg-white p-7 flex flex-col gap-6">
               <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[2rem] font-bold leading-none uppercase"
+                  className="text-[10px] font-semibold tracking-[0.18em] uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Setup
                 </span>
                 <span
-                  className="text-[2rem] font-bold leading-none tabular-nums"
-                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.18em] tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.5)", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   01
                 </span>
@@ -153,17 +153,17 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white p-7 flex flex-col gap-4">
+            <div className="bg-white p-7 flex flex-col gap-6">
               <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[2rem] font-bold leading-none uppercase"
+                  className="text-[10px] font-semibold tracking-[0.18em] uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Audit
                 </span>
                 <span
-                  className="text-[2rem] font-bold leading-none tabular-nums"
-                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.18em] tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.5)", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   02
                 </span>
@@ -177,17 +177,17 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white p-7 flex flex-col gap-4">
+            <div className="bg-white p-7 flex flex-col gap-6">
               <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[2rem] font-bold leading-none uppercase"
+                  className="text-[10px] font-semibold tracking-[0.18em] uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Optimize
                 </span>
                 <span
-                  className="text-[2rem] font-bold leading-none tabular-nums"
-                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.18em] tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.5)", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   03
                 </span>
@@ -201,17 +201,17 @@ export default function Home() {
             </div>
 
             {/* Step 4 */}
-            <div className="bg-white p-7 flex flex-col gap-4">
+            <div className="bg-white p-7 flex flex-col gap-6">
               <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[2rem] font-bold leading-none uppercase"
+                  className="text-[10px] font-semibold tracking-[0.18em] uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Results
                 </span>
                 <span
-                  className="text-[2rem] font-bold leading-none tabular-nums"
-                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                  className="text-[10px] font-semibold tracking-[0.18em] tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.5)", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   04
                 </span>
