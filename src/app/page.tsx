@@ -5,7 +5,7 @@ import { ValuePropCard } from "@/components/ValuePropCard";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <>
       {/* Full-bleed hero with radial gradient */}
       <div
         className="relative min-h-screen flex flex-col"
@@ -123,6 +123,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
