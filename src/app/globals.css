@@ -19,7 +19,6 @@
   --text-secondary: #4b5563;
   --text-muted:     #9ca3af;
 
-  --font-sans: var(--font-jakarta);
   --font-mono: var(--font-geist-mono);
 
   --radius: 0.625rem;
@@ -70,13 +69,6 @@
   --color-border:             var(--border-color);
   --color-input:              var(--input);
   --color-ring:               var(--ring);
-}
-
-body {
-  background: var(--bg-base);
-  color: var(--text-primary);
-  font-family: var(--font-jakarta), sans-serif;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* ─── White panel card ───────────────────────────────────────── */
