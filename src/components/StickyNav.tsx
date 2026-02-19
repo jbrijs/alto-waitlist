@@ -17,58 +17,36 @@ export function StickyNav({ showCta = true, showHowItWorks = true }: { showCta?:
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-6 pt-4 pointer-events-none">
       <nav
-        className="pointer-events-auto relative flex items-center justify-between"
-        style={{
-          width: scrolled ? "min(900px, calc(100% - 48px))" : "100%",
-          padding: scrolled ? "10px 22px" : "16px 8px",
-          borderRadius: scrolled ? "9999px" : "0",
-          background: scrolled ? "rgba(255, 255, 255, 0.62)" : "transparent",
-          backdropFilter: scrolled ? "blur(28px) saturate(200%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(28px) saturate(200%)" : "none",
-          border: scrolled ? "1px solid rgba(255, 255, 255, 0.75)" : "1px solid transparent",
-          boxShadow: scrolled
-            ? "0 8px 40px rgba(0,0,0,0.10), 0 2px 12px rgba(0,0,0,0.06), 0 0 0 0.5px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,1)"
-            : "none",
-          transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-        }}
+        className="nav-pill pointer-events-auto relative flex items-center justify-between"
+        data-scrolled={scrolled ? "true" : undefined}
       >
+        {/* Frosted backdrop — real element so backdrop-filter applies reliably */}
+        {scrolled && (
+          <div
+            className="absolute inset-0 rounded-full bg-white/55 backdrop-blur-[40px] backdrop-saturate-150 z-0"
+            aria-hidden
+          />
+        )}
         {/* Logo */}
-        <Link href="/" className="flex items-baseline gap-0.5 hover:opacity-80 transition-opacity">
-          <span
-            className="text-xl font-bold tracking-tight text-gray-900"
-            style={{ fontFamily: "var(--font-jakarta), sans-serif" }}
-          >
+        <Link href="/" className="flex items-baseline gap-0.5 hover:opacity-80 transition-opacity relative z-10">
+          <span className="text-xl font-bold tracking-tight text-gray-900 font-sans">
             alto
           </span>
-          <span className="text-xl font-bold" style={{ color: "#0d9488" }}>
-            .
-          </span>
+          <span className="text-xl font-bold text-primary">.</span>
         </Link>
 
         {/* Tagline — absolute center, fades out on scroll, hidden on mobile */}
-        <p
-          className="hidden sm:block absolute left-1/2 -translate-x-1/2 text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400 whitespace-nowrap pointer-events-none"
-          style={{
-            fontFamily: "var(--font-geist-mono), monospace",
-            opacity: scrolled ? 0 : 1,
-            transition: "opacity 0.3s ease",
-          }}
-        >
+        <p className="nav-tagline hidden sm:block absolute left-1/2 -translate-x-1/2 text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400 whitespace-nowrap pointer-events-none font-mono z-10">
           Organic Marketing, Automated
         </p>
 
         {/* Right side */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 relative z-10">
           {/* How it works anchor — hidden on mobile */}
           {showHowItWorks && (
             <a
               href="#how-it-works"
-              className="hidden sm:block text-xs font-medium whitespace-nowrap transition-colors hover:text-gray-900"
-              style={{
-                color: "#6b7280",
-                fontFamily: "var(--font-geist-mono), monospace",
-                letterSpacing: "0.04em",
-              }}
+              className="hidden sm:block text-xs font-medium whitespace-nowrap transition-colors hover:text-gray-900 text-gray-500 font-mono tracking-[0.04em]"
             >
               How it works
             </a>
@@ -79,8 +57,7 @@ export function StickyNav({ showCta = true, showHowItWorks = true }: { showCta?:
             <Button
               asChild
               size="sm"
-              className="text-xs font-semibold rounded-full text-white h-8 px-4 whitespace-nowrap"
-              style={{ background: "#0d9488" }}
+              className="text-xs font-semibold rounded-full text-white h-8 px-4 whitespace-nowrap bg-primary"
             >
               <Link href="/reserve">Reserve →</Link>
             </Button>

@@ -125,8 +125,7 @@ export function WaitlistForm() {
       <Button
         type="submit"
         disabled={loading}
-        className="w-full h-11 text-sm font-semibold rounded-lg text-white"
-        style={{ background: loading ? "#5eada8" : "#0d9488" }}
+        className={`w-full h-11 text-sm font-semibold rounded-lg text-white ${loading ? "bg-primary-muted" : "bg-primary"}`}
       >
         {loading ? "Redirecting to checkout..." : "Reserve My Spot — $100 →"}
       </Button>
