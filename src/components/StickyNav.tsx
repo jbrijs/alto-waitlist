@@ -54,7 +54,7 @@ export function StickyNav() {
             transition: "opacity 0.3s ease",
           }}
         >
-          Digital Marketing, Automated
+          Organic Marketing, Automated
         </p>
 
         {/* Right side */}
