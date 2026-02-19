@@ -70,8 +70,8 @@ export default function Home() {
                 </Button>
                 <a
                   href="#how-it-works"
-                  className="h-12 px-6 rounded-lg inline-flex items-center text-sm font-semibold text-gray-600 transition-colors hover:text-gray-900"
-                  style={{ border: "1px solid rgba(0,0,0,0.12)" }}
+                  className="h-12 px-6 rounded-full inline-flex items-center text-sm font-semibold text-gray-600 transition-colors hover:bg-gray-200"
+                  style={{ background: "#e5e7eb" }}
                 >
                   See how it works
                 </a>
