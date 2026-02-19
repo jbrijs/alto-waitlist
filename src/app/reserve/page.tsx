@@ -1,36 +1,19 @@
 import Link from "next/link";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { StickyNav } from "@/components/StickyNav";
 
 export default function ReservePage() {
   return (
-    <div
-      className="min-h-screen flex flex-col"
-      style={{
-        background:
-          "radial-gradient(ellipse 120% 80% at 50% -10%, #fdfcfb 0%, #f0faf8 45%, #f3f4f6 100%)",
-      }}
-    >
-      {/* Floating header */}
-      <header className="flex items-center justify-between px-8 py-6 w-full">
-        <Link href="/" className="flex items-baseline gap-0.5 hover:opacity-80 transition-opacity">
-          <span
-            className="text-xl font-bold tracking-tight text-gray-900"
-            style={{ fontFamily: "var(--font-jakarta), sans-serif" }}
-          >
-            alto
-          </span>
-          <span className="text-xl font-bold" style={{ color: "#0d9488" }}>
-            .
-          </span>
-        </Link>
-        <p
-          className="text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400"
-          style={{ fontFamily: "var(--font-geist-mono), monospace" }}
-        >
-          Digital Marketing, Automated
-        </p>
-      </header>
-
+    <>
+      <StickyNav />
+      <div
+        className="min-h-screen flex flex-col"
+        style={{
+          background:
+            "radial-gradient(ellipse 120% 80% at 50% -10%, #fdfcfb 0%, #f0faf8 45%, #f3f4f6 100%)",
+          paddingTop: "72px",
+        }}
+      >
       {/* Centered form card */}
       <div className="flex-1 flex items-center justify-center px-6 pb-20 relative">
         <div className="panel relative overflow-hidden p-8 w-full max-w-sm">
@@ -81,5 +64,6 @@ export default function ReservePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

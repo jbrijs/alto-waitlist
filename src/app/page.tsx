@@ -1,38 +1,21 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { StickyNav } from "@/components/StickyNav";
 
 export default function Home() {
   return (
     <>
+      <StickyNav />
+
       {/* Full-bleed hero with radial gradient */}
       <div
-        className="relative min-h-screen flex flex-col"
+        className="min-h-screen flex flex-col"
         style={{
           background:
             "radial-gradient(ellipse 120% 80% at 50% -10%, #fdfcfb 0%, #f0faf8 45%, #f3f4f6 100%)",
+          paddingTop: "72px",
         }}
       >
-        {/* Floating header */}
-        <header className="flex items-center justify-between px-8 py-6 w-full">
-          <div className="flex items-baseline gap-0.5">
-            <span
-              className="text-xl font-bold tracking-tight text-gray-900"
-              style={{ fontFamily: "var(--font-jakarta), sans-serif" }}
-            >
-              alto
-            </span>
-            <span className="text-xl font-bold" style={{ color: "#0d9488" }}>
-              .
-            </span>
-          </div>
-          <p
-            className="text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400"
-            style={{ fontFamily: "var(--font-geist-mono), monospace" }}
-          >
-            Digital Marketing, Automated
-          </p>
-        </header>
-
         {/* Hero content — vertically centered in remaining space */}
         <div className="flex-1 flex items-center justify-center px-8 pb-20">
           <div className="max-w-4xl w-full flex flex-col gap-7">
@@ -75,28 +58,30 @@ export default function Home() {
             </p>
 
             {/* CTA */}
-            <div className="flex flex-col gap-2 self-start">
-              <Button
-                asChild
-                size="lg"
-                className="h-12 px-8 text-sm font-semibold rounded-lg text-white"
-                style={{ background: "#0d9488" }}
-              >
-                <Link href="/reserve">Reserve My Spot →</Link>
-              </Button>
+            <div className="flex flex-col gap-3 self-start">
+              <div className="flex items-center gap-3">
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-12 px-8 text-sm font-semibold rounded-lg text-white"
+                  style={{ background: "#0d9488" }}
+                >
+                  <Link href="/reserve">Reserve My Spot →</Link>
+                </Button>
+                <a
+                  href="#how-it-works"
+                  className="h-12 px-6 rounded-lg inline-flex items-center text-sm font-semibold text-gray-600 transition-colors hover:text-gray-900"
+                  style={{ border: "1px solid rgba(0,0,0,0.12)" }}
+                >
+                  See how it works
+                </a>
+              </div>
               <p
                 className="text-xs text-gray-400 px-1"
                 style={{ fontFamily: "var(--font-geist-mono), monospace" }}
               >
                 $100 refundable deposit
               </p>
-              <a
-                href="#how-it-works"
-                className="mt-1 self-start text-xs font-medium"
-                style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace", letterSpacing: "0.05em" }}
-              >
-                See how it works ↓
-              </a>
             </div>
           </div>
         </div>
