@@ -28,7 +28,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const session = event.data.object as {
+    const session = event.data.object as unknown as {
       id: string;
       metadata: { name: string; email: string; businessName: string };
     };
