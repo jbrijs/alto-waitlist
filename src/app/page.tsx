@@ -45,7 +45,7 @@ export default function Home() {
               className="text-[3.75rem] sm:text-[5rem] lg:text-[5.5rem] leading-[1.05] tracking-tight text-gray-900"
               style={{ fontFamily: "var(--font-serif), serif", fontStyle: "italic" }}
             >
-              Your online presence.{" "}
+              Your organic marketing.{" "}
               <span style={{ color: "#0d9488" }}>On autopilot.</span>
             </h1>
 
