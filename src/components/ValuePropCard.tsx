@@ -1,5 +1,7 @@
+import type { ReactNode } from "react";
+
 interface ValuePropCardProps {
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
   description: string;
 }
