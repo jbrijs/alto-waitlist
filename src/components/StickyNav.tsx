@@ -17,7 +17,7 @@ export function StickyNav() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-6 pt-4 pointer-events-none">
       <nav
-        className="pointer-events-auto flex items-center justify-between"
+        className="pointer-events-auto relative flex items-center justify-between"
         style={{
           width: scrolled ? "min(900px, calc(100% - 48px))" : "100%",
           padding: scrolled ? "10px 22px" : "16px 8px",
@@ -45,22 +45,20 @@ export function StickyNav() {
           </span>
         </Link>
 
+        {/* Tagline — absolute center, fades out on scroll */}
+        <p
+          className="absolute left-1/2 -translate-x-1/2 text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400 whitespace-nowrap pointer-events-none"
+          style={{
+            fontFamily: "var(--font-geist-mono), monospace",
+            opacity: scrolled ? 0 : 1,
+            transition: "opacity 0.3s ease",
+          }}
+        >
+          Digital Marketing, Automated
+        </p>
+
         {/* Right side */}
         <div className="flex items-center gap-4">
-          {/* Tagline — fades out on scroll */}
-          <p
-            className="text-[10px] font-semibold tracking-[0.18em] uppercase text-gray-400 whitespace-nowrap overflow-hidden"
-            style={{
-              fontFamily: "var(--font-geist-mono), monospace",
-              opacity: scrolled ? 0 : 1,
-              maxWidth: scrolled ? "0px" : "220px",
-              transition: "opacity 0.3s ease, max-width 0.4s ease",
-              pointerEvents: "none",
-            }}
-          >
-            Digital Marketing, Automated
-          </p>
-
           {/* How it works anchor */}
           <a
             href="#how-it-works"
