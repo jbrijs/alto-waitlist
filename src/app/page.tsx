@@ -130,19 +130,21 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-100 rounded-xl overflow-hidden border border-gray-100">
             {/* Step 1 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <span
-                className="text-[2rem] font-bold leading-none tabular-nums"
-                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
-              >
-                01
-              </span>
-              <div className="flex flex-col gap-1.5">
+              <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  className="text-[2rem] font-bold leading-none uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Setup
                 </span>
+                <span
+                  className="text-[2rem] font-bold leading-none tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  01
+                </span>
+              </div>
+              <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">Integrate your business</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Connect your website, Google Business Profile, and other services. Takes under 5 minutes and Alto takes over from there.
@@ -152,19 +154,21 @@ export default function Home() {
 
             {/* Step 2 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <span
-                className="text-[2rem] font-bold leading-none tabular-nums"
-                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
-              >
-                02
-              </span>
-              <div className="flex flex-col gap-1.5">
+              <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  className="text-[2rem] font-bold leading-none uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Audit
                 </span>
+                <span
+                  className="text-[2rem] font-bold leading-none tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  02
+                </span>
+              </div>
+              <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">AI maps your presence</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Alto benchmarks where you rank across ChatGPT, Google, and many other online sources, capturing how your brand is described and where competitors have the edge.
@@ -174,19 +178,21 @@ export default function Home() {
 
             {/* Step 3 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <span
-                className="text-[2rem] font-bold leading-none tabular-nums"
-                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
-              >
-                03
-              </span>
-              <div className="flex flex-col gap-1.5">
+              <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  className="text-[2rem] font-bold leading-none uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Optimize
                 </span>
+                <span
+                  className="text-[2rem] font-bold leading-none tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  03
+                </span>
+              </div>
+              <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">Autonomous optimization</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Alto publishes SEO content, strengthens your citation signals, updates your local listings, and continuously improves how AI platforms represent your business.
@@ -196,19 +202,21 @@ export default function Home() {
 
             {/* Step 4 */}
             <div className="bg-white p-7 flex flex-col gap-4">
-              <span
-                className="text-[2rem] font-bold leading-none tabular-nums"
-                style={{ color: "rgba(13, 148, 136, 0.45)", fontFamily: "var(--font-geist-mono), monospace" }}
-              >
-                04
-              </span>
-              <div className="flex flex-col gap-1.5">
+              <div className="flex items-baseline justify-between">
                 <span
-                  className="text-[10px] font-semibold tracking-[0.15em] uppercase"
+                  className="text-[2rem] font-bold leading-none uppercase"
                   style={{ color: "#0d9488", fontFamily: "var(--font-geist-mono), monospace" }}
                 >
                   Results
                 </span>
+                <span
+                  className="text-[2rem] font-bold leading-none tabular-nums"
+                  style={{ color: "rgba(13, 148, 136, 0.25)", fontFamily: "var(--font-geist-mono), monospace" }}
+                >
+                  04
+                </span>
+              </div>
+              <div className="flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold text-gray-900">Results you can see</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   Watch AI visibility, search rankings, and local traffic grow over time. Clear metrics with no agency interpretation layer between you and the data.
