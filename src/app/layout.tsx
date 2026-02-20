@@ -20,12 +20,31 @@ const dmSerif = DM_Serif_Display({
   weight: "400",
 });
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_APP_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Alto | Early Access for autonomous organic marketing",
   description:
     "Alto is an AI-native organic marketing agency that autonomously manages your SEO, AEO, and online presence. Join the waitlist.",
   icons: {
     icon: "/A.svg",
+    apple: "/A.svg",
+  },
+  openGraph: {
+    title: "Alto | Early Access for autonomous organic marketing",
+    description:
+      "Alto is an AI-native organic marketing agency that autonomously manages your SEO, AEO, and online presence. Join the waitlist.",
+    images: ["/A.png"],
+  },
+  twitter: {
+    card: "summary",
+    title: "Alto | Early Access for autonomous organic marketing",
+    description:
+      "Alto is an AI-native organic marketing agency that autonomously manages your SEO, AEO, and online presence. Join the waitlist.",
+    images: ["/A.png"],
   },
 };
 
