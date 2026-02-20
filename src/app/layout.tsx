@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Alto | Early Access for autonomous organic marketing",
   description:
     "Alto is an AI-native organic marketing agency that autonomously manages your SEO, AEO, and online presence. Join the waitlist.",
+  icons: {
+    icon: "/A.svg",
+  },
 };
 
 export default function RootLayout({
